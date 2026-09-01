@@ -1,0 +1,31 @@
+﻿<Window x:Class="VtuberDbManager.View.VisitorCountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VtuberDbManager.View"
+        xmlns:ViewModel="clr-namespace:VtuberDbManager.ViewModel"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=ViewModel:VisitorCountWindowViewModel, IsDesignTimeCreatable=True}"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        Title="VisitorCountWindow" Height="150" Width="200"
+        ResizeMode="NoResize"
+        Closed="Window_Closed">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="ContentRendered">
+            <i:InvokeCommandAction Command="{Binding ContentRenderedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="累計訪問者数"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding VisitorCount.Value}"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
