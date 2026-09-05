@@ -1,6 +1,7 @@
 # AgencyVTuberDBManager
 
-vindies.jp の VTuberフィルタリング用データベース(所属/独立判定データ)を管理するための、社内利用限定のWPFデスクトップアプリ。
+vindies.jp の VTuberフィルタリング用データベースを管理するためのWPFデスクトップアプリ。
+企業に所属するVTuberのデータを保持している。
 
 ## 背景
 
